@@ -9,7 +9,9 @@
       {{ $invertedLogo = .Site.Params.logo.inverted }}
     {{ end }}
     <a class="navbar-brand" href="{{ .Site.BaseURL }}">
+      {{ if .Site.Params.logo }}
       <img src="{{ $invertedLogo }}" id="logo">
+      {{ end }}
       {{- .Site.Title -}}
     </a>
     <button
@@ -58,7 +60,9 @@
       </ul>
     </div>
   </div>
+  {{ if .Site.Params.logo }}
   <!-- Store the logo information in a hidden img for the JS -->
   <img src="{{ $mainLogo }}" class="d-none" id="main-logo">
   <img src="{{ $invertedLogo }}" class="d-none" id="inverted-logo">
+  {{ end }}
 </nav>

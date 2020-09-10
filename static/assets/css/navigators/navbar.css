@@ -13,6 +13,14 @@
 
 /* --- initial state start ------ */
 
+.navbar-brand {
+  transition: opacity 100ms;
+}
+
+.navbar-brand:hover {
+  opacity: 0.6;
+}
+
 .initial-navbar {
   background-color: transparent;
 }

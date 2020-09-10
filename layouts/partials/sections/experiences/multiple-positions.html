@@ -11,7 +11,7 @@
             {{ .company.location }}
         </p>
         <!-- Add company overview -->
-        <p>{{ .company.overview | markdownify }}</p>
+        <p class="mb-4">{{ .company.overview | markdownify }}</p>
     </div>
     <!-- Add the positions information -->
     <div class="positions">
@@ -19,7 +19,7 @@
         <h6 class="designation">{{ $position.designation }}</h6>
         <p class="text-muted">{{ $position.start }} - {{if $position.end }} {{ $position.end }} {{else}} Present {{end}}</p>
         <!-- Add the responsibilities handled at this position -->
-        <ul class="justify-content-around">
+        <ul class="justify-content-around ml-4">
         {{ range $position.responsibilities }}
             <li>{{ . | markdownify }}</li>
         {{ end }}

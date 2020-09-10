@@ -1,6 +1,7 @@
 .social-link {
   list-style: none;
   padding: 0.2rem;
+  padding-left: 0;
 }
 
 .social-link a {
@@ -11,7 +12,11 @@
 
 .social-link a:hover {
   color: #248aaa;
-  transition: all 0.3s ease-in;
+  transition: all 150ms ease;
+}
+
+.social-link:first-child a {
+  padding-left: 0.25rem;
 }
 
 .circular-progress {

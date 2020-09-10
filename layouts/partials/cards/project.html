@@ -13,12 +13,21 @@
             <h5 class="card-title mb-0">{{ .name }}</h5>
           </div>
           <div class="sub-title">
-            <span>{{ .role }}</span>
-            <span>{{ .timeline }}</span>
+            {{ if .subtitle }}
+              <span>{{ .subtitle }}</span>
+            {{ else }}
+              {{ if .role }}
+              <span>{{ .role }}</span>
+              {{ end }}
+
+              {{ if .timeline }}
+              <span>{{ .timeline }}</span>
+              {{ end }}
+            {{ end }}
           </div>
         </div>
       </a>
-      <div class="card-body text-justify pt-1 pb-1">
+      <div class="card-body text-left pt-1 pb-1">
         <p>{{ .summary | markdownify }}</p>
         <span class="float-right">
           {{ if .repo }}
